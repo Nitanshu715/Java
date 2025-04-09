@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-class Employee2 { // Class name changed to Employee2
+public class employee2 {
     private String name;
     private int id;
     private double salary;
 
-    public Employee2(String name, int id, double salary) {
+    public employee2(String name, int id, double salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
@@ -26,13 +26,13 @@ class Employee2 { // Class name changed to Employee2
     }
 
     public static void main(String[] args) {
-        ArrayList<Employee2> employees = new ArrayList<>();
-        employees.add(new Employee2("Nitanshu1", 1, 50000));
-        employees.add(new Employee2("Nitanshu2", 2, 60000));
-        employees.add(new Employee2("Nitanshu3", 3, 70000));
+        ArrayList<employee2> employees = new ArrayList<>();
+        employees.add(new employee2("Nitanshu1", 1, 50000));
+        employees.add(new employee2("Nitanshu2", 2, 60000));
+        employees.add(new employee2("Nitanshu3", 3, 70000));
 
         // Update salary of Nitanshu2 (ID = 2)
-        for (Employee2 emp : employees) {
+        for (employee2 emp : employees) {
             if (emp.getId() == 2) {
                 emp.setSalary(65000);
                 break;
@@ -40,7 +40,7 @@ class Employee2 { // Class name changed to Employee2
         }
 
         // Remove employee with ID = 1 (Nitanshu1)
-        Iterator<Employee2> iterator = employees.iterator();
+        Iterator<employee2> iterator = employees.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().getId() == 1) {
                 iterator.remove();
@@ -48,7 +48,7 @@ class Employee2 { // Class name changed to Employee2
         }
 
         // Print remaining employees
-        for (Employee2 emp : employees) {
+        for (employee2 emp : employees) {
             System.out.println(emp);
         }
     }
